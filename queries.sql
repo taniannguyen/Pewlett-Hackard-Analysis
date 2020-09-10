@@ -131,3 +131,19 @@ INNER JOIN departments AS d
 ON (dm.dept_no = d.dept_no)
 INNER JOIN current_emp AS ce
 ON (dm.emp_no = ce.emp_no);
+
+-- Query to have about to retire sales
+SELECT ri.emp_no,
+	ri.first_name,
+	ri.last_name,
+	d.dept_name
+INTO retired_dept_info
+FROM retirement_info as ri
+INNER JOIN dept_emp AS de
+ON (ri.emp_no = de.emp_no)
+INNER JOIN departments AS d
+ON (de.dept_no = d.dept_no);
+SELECT * FROM retired_dept_info WHERE dept_name = 'Sales';
+
+-- Query to find retirees in sales and development for a new program mentor
+SELECT * FROM retired_dept_info WHERE dept_name IN ('Sales', 'Development');
