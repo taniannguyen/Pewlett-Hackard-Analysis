@@ -18,7 +18,7 @@ SELECT DISTINCT ON (rt.emp_no) rt.emp_no,
     rt.title
 INTO unique_titles
 FROM retirement_titles as rt
-ORDER BY rt.emp_no, rt.title DESC;
+ORDER BY rt.emp_no ASC, rt.to_date DESC;
 
 
 -- number of employees by their most recent job title who are about to retire.
@@ -27,3 +27,21 @@ INTO retiring_titles
 FROM unique_titles as ut
 GROUP BY ut.title 
 ORDER BY COUNT (ut.title) DESC;
+
+
+-- Mentorship Eligibility employees who are eligible mentorship program
+SELECT DISTINCT ON (e.emp_no) e.emp_no,
+    e.first_name,
+    e.last_name,
+    e.birth_date,
+    de.from_date,
+    de.to_date,
+    t.title
+-- INTO mentorship_eligibility
+FROM employees as e
+INNER JOIN dept_emp as de 
+ON (e.emp_no = de.emp_no)
+INNER JOIN titles as t 
+ON (e.emp_no = t.emp_no)
+WHERE (de.to_date BETWEEN '1965-01-01' AND '1965-12-31')
+ORDER BY e.emp_no;
