@@ -14,7 +14,7 @@ The purpose of this analysis is to help Bobby build an employee database with SQ
 
 [Mentorship Eligibility](Data/mentorship_eligibilty.csv)
 
-- Senior engineers have the opportunity to participate in the mentorship program, as those positions will be the most turned over due to retirement.
+- Engineers will have the most qualified mentors to participate in the mentorship program, 
 
 ## Summary
 Once the silver tsunami begins to make an impact 90,398 roles will be needed to be filled. There will not be enough qualified, retirement-ready in the departments to mentor the next generation of Pewlett Hackard employees because the retired group is way larger than the qualified group of mentors. Additional queries that can be used to provide more insight into the upcoming silver tsunami is first check out the employees that are not qualified in the year 1965 and start training to so they can become mentors as there will be a shortage. The next query would be finding the qualified in 1966 and 1967 to start prepping for the mentorship so they can be ready for the new group as 1965 groups retires they can assist.
