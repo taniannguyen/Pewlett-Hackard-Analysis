@@ -5,6 +5,6 @@ The purpose of this analysis is to help Bobby build an employee database with SQ
 ## Results
 - This table represents the retirement titles of the employees that may retire in the next few years.
 
-[Retirement Titles](data/retirement_titles.csv)
+[Retirement Titles](Data/retirement_titles.csv)
 
 ## Summary
